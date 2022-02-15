@@ -48,6 +48,4 @@ In this repository I have made a front end using streamlit .Streamlit doesn’t 
 # Conclusion 
 Finally I build the webapp and deployed which has training accuracy of 70.56% and test accuracy of 60.71%
 
-If failed to access the website and just wanted to see how the webapp works, then visit this link:-
-
-
+-If failed to access the website and just wanted to see how the webapp works, then visit this link:-https://drive.google.com/drive/folders/17EB1ayDrVSacF6AaqdnQ_SITfR-q8zhx?usp=sharing
