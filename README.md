@@ -28,10 +28,10 @@ Dataset link - www.kaggle.com/jonathanoheix/face-expression-recognition-dataset
 # Model Creation 
 Using Deep learning CNN In deep learning, a convolutional neural network (CNN, or ConvNet) is a class of deep neural network, most commonly applied to analyze visual imagery.based on the shared-weight architecture of the convolution kernels or filters that slide along input features and provide translation equivariant responses known as feature maps.Counter-intuitively, most convolutional neural networks are only equivariant, as opposed to invariant, to translation. They have applications in image and video recognition, recommender systems, image classification, image segmentation, medical image analysis, natural language processing, brain-computer interfaces, and financial time series.CNNs are regularized versions of multilayer perceptrons. Multilayer perceptrons usually mean fully connected networks, that is, each neuron in one layer is connected to all neurons in the next layer. The "full connectivity" of these networks make them prone to overfitting data. Typical ways of regularization, or preventing overfitting, include: penalizing parameters during training (such as weight decay) or trimming connectivity (skipped connections, dropout, etc.) CNNs take a different approach towards regularization: they take advantage of the hierarchical pattern in data and assemble patterns of increasing complexity using smaller and simpler patterns embossed in their filters. Therefore, on a scale of connectivity and complexity, CNNs are on the lower extreme. Convolutional networks were inspired by biological processes in that the connectivity pattern between neurons resembles the organization of the animal visual cortex. Individual cortical neurons respond to stimuli only in a restricted region of the visual field known as the receptive field. The receptive fields of different neurons partially overlap such that they cover the entire visual field.CNNs use relatively little pre-processing compared to other image classification algorithms. This means that the network learns to optimize the filters (or kernels) through automated learning, whereas in traditional algorithms these filters are hand-engineered. This independence from prior knowledge and human intervention in feature extraction is a major advantage.
 ![image](https://user-images.githubusercontent.com/85886359/154071305-79f06da3-12f9-4024-a478-43ed342c211c.png)
+
 The training gave the accuracy of 83% and test accuracy of 57%. It seems good as compared to the dataset. So, I save the model and the detection i got from live video was excellent. 
 One drawback of the system is the some Disgust faces are showing Neutral .Because less no. of disgust faces are given to train .This may be the reason.
 I deployed these model on streamlit
-
 # Algorithm
 First, the haar cascade method is used to detect faces in each frame of the webcam feed.
 
@@ -42,11 +42,12 @@ The network outputs a list of softmax scores for the six classes of emotions.
 The emotion with maximum score is displayed on the screen.
 # Loss and Accuracy plot 
 ![image](https://user-images.githubusercontent.com/85886359/154072670-69bcab7e-4f22-4ecd-8f9f-8b16e3a12fc8.png)
-
 # Deployment of Streamlit WebApp in Heroku and Streamlit
 In this repository I have made a front end using streamlit .Streamlit doesn’t provide the live capture feature itself, instead uses a third party API. I have used streamlit-webrtc which helped to deal with real-time video streams. Image captured from the webcam is sent to VideoTransformer function to detect the emotion. Then this model was deployed on heroku and streamlit platform with the help of buildpack-apt which is necessary to deploy opencv model on heroku and streamlit.
-
+- Heroku Link: - https://face-emotion-recognition-alma.herokuapp.com/ 
 # Conclusion 
+Finally I build the webapp and deployed which has training accuracy of 70.56% and test accuracy of 60.71%
 
+If failed to access the website and just wanted to see how the webapp works, then visit this link:-
 
 
